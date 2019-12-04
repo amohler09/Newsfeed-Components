@@ -86,6 +86,15 @@ const data = [
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   },
+  {
+    title: 'Whatever literally cold-pressed green juice tattooed raw denim, lumbersexual',
+    date: 'Jul 17, 1991',
+    firstParagraph: `Chia meh mumblecore, offal echo park meggings hammock VHS meditation street art bitters tacos church-key coloring book. Shabby chic succulents lo-fi, iPhone intelligentsia cloud bread dreamcatcher kickstarter heirloom la croix pickled wolf 3 wolf moon. Gochujang taiyaki brunch skateboard tumblr bitters typewriter ramps migas lyft humblebrag waistcoat YOLO. Asymmetrical artisan messenger bag iceland next level gluten-free. `,
+
+    secondParagraph: `Affogato plaid distillery four loko franzen, yuccie snackwave pitchfork photo booth disrupt health goth keffiyeh. Brooklyn swag lo-fi bespoke. Bicycle rights echo park butcher blog woke scenester. Leggings bitters hoodie knausgaard squid pok pok tilde crucifix mlkshk. Yuccie typewriter pour-over pabst YOLO, forage authentic cornhole portland blog cred ethical celiac.`,
+
+    thirdParagraph: `Hammock vaporware knausgaard trust fund cliche intelligentsia lo-fi flexitarian photo booth 3 wolf moon salvia iceland. Skateboard migas keytar godard VHS green juice paleo bushwick raclette blue bottle everyday carry master cleanse occupy. Brunch everyday carry chillwave, pinterest thundercats roof party mixtape. Godard brooklyn butcher offal af hella poutine hot chicken green juice ethical lumbersexual bespoke austin mixtape banjo.`
+  },
 
 ];
 
