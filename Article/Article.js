@@ -85,7 +85,17 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-  }
+  },
+  {
+    title: 'Whatever literally cold-pressed green juice tattooed raw denim, lumbersexual',
+    date: 'Jul 17, 1991',
+    firstParagraph: `Chia meh mumblecore, offal echo park meggings hammock VHS meditation street art bitters tacos church-key coloring book. Shabby chic succulents lo-fi, iPhone intelligentsia cloud bread dreamcatcher kickstarter heirloom la croix pickled wolf 3 wolf moon. Gochujang taiyaki brunch skateboard tumblr bitters typewriter ramps migas lyft humblebrag waistcoat YOLO. Asymmetrical artisan messenger bag iceland next level gluten-free. `,
+
+    secondParagraph: `Affogato plaid distillery four loko franzen, yuccie snackwave pitchfork photo booth disrupt health goth keffiyeh. Brooklyn swag lo-fi bespoke. Bicycle rights echo park butcher blog woke scenester. Leggings bitters hoodie knausgaard squid pok pok tilde crucifix mlkshk. Yuccie typewriter pour-over pabst YOLO, forage authentic cornhole portland blog cred ethical celiac.`,
+
+    thirdParagraph: `Hammock vaporware knausgaard trust fund cliche intelligentsia lo-fi flexitarian photo booth 3 wolf moon salvia iceland. Skateboard migas keytar godard VHS green juice paleo bushwick raclette blue bottle everyday carry master cleanse occupy. Brunch everyday carry chillwave, pinterest thundercats roof party mixtape. Godard brooklyn butcher offal af hella poutine hot chicken green juice ethical lumbersexual bespoke austin mixtape banjo.`
+  },
+
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -112,3 +122,44 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function componentMaker(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const newArticle = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const paragraphOne = document.createElement('p');
+  const paragraphTwo = document.createElement('p');
+  const paragraphThree = document.createElement('p');
+  const button = document.createElement('span');
+
+  newArticle.classList.add('article');
+  articleDate.classList.add('date');
+  button.classList.add('expandButton');
+
+  newArticle.appendChild(articleTitle);
+  newArticle.appendChild(articleDate);
+  newArticle.appendChild(paragraphOne);
+  newArticle.appendChild(paragraphTwo);
+  newArticle.appendChild(paragraphThree);
+  newArticle.appendChild(button);
+
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  paragraphOne.textContent = firstParagraph;
+  paragraphTwo.textContent = secondParagraph;
+  paragraphThree.textContent = thirdParagraph;
+  button.textContent = '\u25bc';
+
+  button.addEventListener('click', event => {
+    console.log('button clicked', event.target);
+    newArticle.classList.toggle('article-open');
+  })
+
+  return newArticle;  
+}
+
+const article = document.querySelector('.articles');
+
+  data.forEach(data => {
+    article.appendChild(componentMaker(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
+  });
